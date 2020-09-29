@@ -1,0 +1,34 @@
+///////////////ABSTRACTS
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+///////////////BASE
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+///////////////COMPONENTS
+@import "components/bio";
+@import "components/cards";
+@import "components/contact";
+//@import "components/mapouter";
+@import "components/slideshow";
+
+///////////////LAYOUT
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";
+
+///////////////PAGES
+@import "pages/about";
+@import "pages/gallery";
+@import "pages/home";
+@import "pages/portfolio";
+@import "pages/services";
+
+///////////////THEMES
+@import "themes/buttons";
+
+///////////////VENDORS

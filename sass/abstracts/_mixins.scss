@@ -1,0 +1,56 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+////////// GENERAL MIXINS //////////
+
+////////// GENERIC PHONE
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  ////////// TABLET PORTRAIT
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  ////////// TABLET LANDSCAPE
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  ////////// LARGE DESKTOP
+  @if $breakpoint == big-desktop-2 {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+
+  @if $breakpoint == big-desktop-1 {
+    @media only screen and (min-width: 93.75em) {
+      @content;
+    } //1500px
+  }
+
+  ////////// WEBSITE SPECIFIC MIXINS //////////
+  @if $breakpoint == tab-2 {
+    @media only screen and (max-width: 68.75em) {
+      @content;
+    } //1100px
+  }
+
+  @if $breakpoint == phone-2 {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    } //500px
+  }
+}

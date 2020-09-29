@@ -1,0 +1,208 @@
+.cards {
+  grid-column: center-start / center-end;
+
+  padding: 40px;
+
+  display: grid;
+  grid-gap: 3rem;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content 1fr;
+
+  &__heading {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-bottom: 3rem;
+    font-weight: 200;
+  }
+}
+
+.card {
+  //FUNCTIONALITY
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    height: 52rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: $box-shadow-primary;
+    &--front {
+      &-1 {
+        background-color: $color-pink-2;
+      }
+      &-2 {
+        background-color: $color-blue-light;
+      }
+      &-3 {
+        background-color: $color-pink-3;
+      }
+    }
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-pink-2, 0.6),
+          rgba($color-white, 0.6)
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-blue-light, 0.6),
+          rgba($color-white, 0.6)
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-pink-3, 0.6),
+          rgba($color-white, 0.6)
+        );
+      }
+    }
+  }
+
+  &--1 {
+  }
+
+  &--3 {
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  //  FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      background-image: linear-gradient(
+          rgba($color-white, 0.6),
+          rgba($color-white, 0.6)
+        ),
+        url(../img/flowers.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          rgba($color-white, 0.6),
+          rgba($color-white, 0.6)
+        ),
+        url(../img/flower-3.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          rgba($color-white, 0.6),
+          rgba($color-white, 0.6)
+        ),
+        url(../img/flower-4.jpg);
+    }
+  }
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-primary;
+    position: absolute;
+    top: 12rem;
+    right: 3rem;
+    width: 75%;
+    background-image: linear-gradient(
+      rgba($color-white, 0.6),
+      rgba($color-white, 0.6)
+    );
+    display: grid;
+
+    width: 100%;
+  }
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    justify-self: end;
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: $color-white;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-white;
+        }
+      }
+    }
+  }
+
+  // BACKSIDE STYLING
+  &__cta {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 13rem;
+    margin-top: 15rem;
+
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    grid-row: 1/2;
+  }
+
+  &__price-only {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  &__price-value {
+    font-size: 4rem;
+    font-weight: 200;
+  }
+}
+
+.btn__card-1 {
+  background-color: $color-pink-2;
+}
+
+.btn__card-2 {
+  background-color: $color-blue-light;
+}
+
+.btn__card-3 {
+  background-color: $color-pink-3;
+}

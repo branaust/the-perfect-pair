@@ -1,0 +1,103 @@
+.bio {
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: repeat(2, 50vw);
+
+  margin: 12rem 0;
+
+  @include respond(tab-land) {
+    grid-gap: 3rem;
+  }
+
+  &__picture {
+    grid-column: 1 / 2;
+
+    display: grid;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    overflow: hidden;
+    justify-self: center;
+
+    @include respond(tab-land) {
+      margin-left: 3rem;
+      width: 80%;
+    }
+  }
+
+  &__text {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-rows: 20% 66% 1fr;
+    justify-content: center;
+    text-align: start;
+    margin-right: 3rem;
+
+    @include respond(big-desktop-1) {
+      margin-right: 10rem;
+      margin-top: 3rem;
+    }
+
+    &--heading {
+      display: grid;
+      grid-row: repeat(2, min-content);
+      justify-content: center;
+      align-self: flex-start;
+      text-align: center;
+      grid-row-gap: 2.5rem;
+      margin-top: 1rem;
+
+      &-primary {
+        font-weight: 200;
+      }
+
+      &-secondary {
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      &-span {
+        color: $color-blue-light;
+        font-weight: 400;
+      }
+
+      @include respond(tab-land) {
+        grid-row-gap: 1.5rem;
+      }
+    }
+
+    &--p {
+      font-size: 1.6rem;
+      line-height: 3.5rem;
+
+      margin-bottom: 2rem;
+      margin-right: 3rem;
+      transform: translateY(-1rem);
+
+      @include respond(tab-land) {
+        font-size: 1.3rem;
+        line-height: 3rem;
+        align-self: center;
+        margin-top: 1rem;
+        margin-right: 5rem;
+      }
+    }
+  }
+
+  &__btn {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    @include respond(big-desktop-1) {
+      transform: scaleY(-3px);
+    }
+  }
+}
+
+.bio__picture img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}

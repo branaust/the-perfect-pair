@@ -1,0 +1,137 @@
+.both {
+  grid-row: 5 / 6;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 6rem;
+  box-shadow: $box-shadow-primary;
+  padding: 40px;
+  z-index: 20;
+
+  width: auto;
+
+  margin: 12rem 0;
+}
+
+.contact {
+  grid-column: 2 / 3;
+  align-self: center;
+
+  &__form {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    grid-template-rows: repeat(7, 1fr) 12rem;
+    align-content: center;
+    justify-content: start;
+
+    &--heading {
+      justify-self: center;
+      grid-column: 1 / -1;
+      font-weight: 200;
+      margin-top: 1rem;
+    }
+  }
+
+  &__item {
+    font-size: 1.4rem;
+    width: 80%;
+    position: relative;
+    height: 5rem;
+    overflow: hidden;
+
+    display: grid;
+    justify-self: center;
+
+    &--input {
+      width: 100%;
+      height: 100%;
+      color: $color-secondary;
+      padding-top: 2rem;
+      border: none;
+      outline: none;
+    }
+
+    &--input:focus + &--label &--label-name,
+    &--input:valid + &--label &--label-name {
+      transform: translateY(-150%);
+      font-size: 1.2rem;
+      color: $color-blue-light;
+    }
+    &--input:focus + &--label &--label-name-message,
+    &--input:valid + &--label &--label-name-message {
+      transform: translateY(-400%);
+      font-size: 1.2rem;
+      color: $color-blue-light;
+    }
+
+    &--input:focus + &--label::after,
+    &--input:valid + &--label::after {
+      transform: translateX(0%);
+    }
+
+    &--label {
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0px;
+      left: 0%;
+      width: 150%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 1px solid $color-secondary;
+    }
+
+    &--label::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -1px;
+      height: 100%;
+      width: 100%;
+      border-bottom: 0.3rem solid $color-blue-light;
+      transform: translateX(-100%);
+      transition: all 0.3s ease;
+    }
+
+    &--label-name,
+    &--label-name-message {
+      position: absolute;
+      bottom: 5px;
+      left: 0px;
+      transition: all 0.3s ease;
+    }
+
+    &--phone,
+    &--date {
+      grid-row: 4 / 5;
+      align-self: flex-end;
+    }
+
+    &--message {
+      grid-column: 1 / -1;
+      grid-row: 6 / 7;
+      height: 140%;
+      align-self: flex-start;
+    }
+
+    &--btn {
+      grid-column: 1/-1;
+      grid-row: 8/9;
+      overflow: visible;
+      align-self: center;
+
+      width: auto;
+    }
+  }
+}
+
+input[type="submit"] {
+  font-size: 1.6rem;
+}
+
+.contact textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+}

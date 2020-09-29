@@ -1,0 +1,75 @@
+.header {
+  background-color: $color-white;
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 10px 30px;
+
+  &__logo {
+    grid-column: 1/2;
+    width: 100%;
+    height: auto;
+    display: grid;
+
+    &--img {
+      object-fit: cover;
+      width: 80%;
+      max-height: auto;
+      justify-self: center;
+    }
+  }
+
+  &__nav {
+    grid-column: 2/3;
+
+    &--list {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: auto;
+      justify-content: right;
+    }
+
+    &--item {
+      display: grid;
+
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      list-style: none;
+      transition: all 2s;
+    }
+
+    &--link {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: $color-primary;
+      transition: all 0.2s;
+    }
+
+    &--link:hover {
+      color: $color-blue-light;
+    }
+
+    &--link::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 100%;
+      left: 0%;
+      background: $color-blue-light;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 300ms ease-in-out;
+    }
+
+    &--link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}

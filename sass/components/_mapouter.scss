@@ -1,0 +1,13 @@
+#map {
+  display: flex;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  height: 100%;
+  width: 100%;
+}
+
+.map {
+  display: grid;
+  height: 100%;
+  width: 100%;
+}

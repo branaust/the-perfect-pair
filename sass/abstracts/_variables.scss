@@ -1,0 +1,31 @@
+///////////////COLORS
+
+$color-primary: #2c302c; //Charleston Green - main text
+$color-secondary: #2d252b; // Raisin Black
+$color-tertiary: #32292f; // Black Coffee
+
+$color-white: #fff; // White
+$color-black: rgb(0, 0, 0);
+$color-grey-light-1: #fbfdf9; // Baby Powder - main background
+$color-grey-light-2: #eae7c6; // Platinum - secondary background
+$color-grey-light-3: #fceeb5;
+
+$color-grey-dark-1: #a7aba8; // Silver Chalice
+$color-grey-dark-2: #54555a; // Davy's Grey
+$color-grey-dark-3: #b8bcb9; //
+
+$color-blue-light: #9fd3d2;
+$color-blue-dark: #223368;
+$color-purple: #4e1f8b;
+
+$color-pink-1: #e7d4d3;
+$color-pink-2: #e2b9d1;
+$color-pink-3: #c19bcc;
+
+///////////////FONTS
+$font-primary: "Montserrat", sans-serif;
+
+///////////////BOX SHADOWS
+$box-shadow-primary: 0 1.5rem 4rem rgba($color-black, 0.4);
+$box-shadow-secondary: 0 1.5rem 3rem rgba($color-black, 0.2);
+$box-shadow-hover: 0 2.5rem 4rem rgba($color-black, 0.5);

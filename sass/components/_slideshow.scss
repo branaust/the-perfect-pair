@@ -1,0 +1,12 @@
+.slideshow {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+      rgba($color-blue-light, 0.2),
+      rgba($color-blue-light, 0.3)
+    ),
+    url(../img/header.png);
+  background-size: cover;
+  background-position: center bottom;
+  padding: 8rem;
+  padding-top: 4rem;
+}
