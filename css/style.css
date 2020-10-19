@@ -70,7 +70,7 @@ h2 {
 .bio {
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: repeat(2, 50vw);
+  grid-template-columns: 33% 1fr;
   margin: 12rem 0; }
   @media only screen and (max-width: 75em) {
     .bio {
@@ -83,7 +83,8 @@ h2 {
     height: auto;
     overflow: hidden;
     justify-self: center;
-    align-self: center; }
+    align-self: center;
+    margin-left: 30rem; }
     @media only screen and (max-width: 75em) {
       .bio__picture {
         margin-left: 3rem;
@@ -91,7 +92,7 @@ h2 {
   .bio__text {
     grid-column: 2 / -1;
     display: grid;
-    grid-template-rows: 20% 66% 1fr;
+    grid-template-rows: 20% auto 1fr;
     justify-content: center;
     text-align: start;
     margin-right: 3rem; }
@@ -106,7 +107,8 @@ h2 {
       align-self: flex-start;
       text-align: center;
       grid-row-gap: 2.5rem;
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      margin-right: 3rem; }
       .bio__text--heading-primary {
         font-weight: 200; }
       .bio__text--heading-secondary {
@@ -123,7 +125,10 @@ h2 {
       line-height: 3.5rem;
       margin-bottom: 2rem;
       margin-right: 3rem;
-      transform: translateY(-1rem); }
+      transform: translateY(-1rem);
+      background-color: rgba(226, 185, 209, 0.9);
+      padding: 3rem;
+      color: #fff; }
       @media only screen and (max-width: 75em) {
         .bio__text--p {
           font-size: 1.3rem;
@@ -134,7 +139,8 @@ h2 {
   .bio__btn {
     display: grid;
     justify-items: center;
-    align-items: center; }
+    align-items: center;
+    margin-right: 3rem; }
     @media only screen and (min-width: 93.75em) {
       .bio__btn {
         transform: scaleY(-3px); } }
@@ -146,7 +152,7 @@ h2 {
 
 .cards {
   grid-column: center-start / center-end;
-  padding: 40px;
+  margin-bottom: 100px;
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);

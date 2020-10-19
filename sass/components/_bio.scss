@@ -2,7 +2,7 @@
   grid-column: full-start / full-end;
 
   display: grid;
-  grid-template-columns: repeat(2, 50vw);
+  grid-template-columns: 33% 1fr;
 
   margin: 12rem 0;
 
@@ -20,7 +20,7 @@
     overflow: hidden;
     justify-self: center;
     align-self: center;
-
+    margin-left: 30rem;
     @include respond(tab-land) {
       margin-left: 3rem;
       width: 80%;
@@ -30,7 +30,7 @@
   &__text {
     grid-column: 2 / -1;
     display: grid;
-    grid-template-rows: 20% 66% 1fr;
+    grid-template-rows: 20% auto 1fr;
     justify-content: center;
     text-align: start;
     margin-right: 3rem;
@@ -48,6 +48,7 @@
       text-align: center;
       grid-row-gap: 2.5rem;
       margin-top: 1rem;
+      margin-right: 3rem;
 
       &-primary {
         font-weight: 200;
@@ -75,6 +76,9 @@
       margin-bottom: 2rem;
       margin-right: 3rem;
       transform: translateY(-1rem);
+      background-color: rgba(226, 185, 209, 0.9);
+      padding: 3rem;
+      color: $color-white;
 
       @include respond(tab-land) {
         font-size: 1.3rem;
@@ -90,6 +94,7 @@
     display: grid;
     justify-items: center;
     align-items: center;
+    margin-right: 3rem;
 
     @include respond(big-desktop-1) {
       transform: scaleY(-3px);
