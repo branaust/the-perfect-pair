@@ -24,7 +24,7 @@ body {
 .container {
   display: grid;
   justify-content: center;
-  grid-template-rows: max-content 80vh max-content min-content max-content repeat(2, min-content);
+  grid-template-rows: 80vh max-content max-content min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .container > * {
     font-size: 3rem; }
@@ -82,7 +82,8 @@ h2 {
     max-width: 550px;
     height: auto;
     overflow: hidden;
-    justify-self: center; }
+    justify-self: center;
+    align-self: center; }
     @media only screen and (max-width: 75em) {
       .bio__picture {
         margin-left: 3rem;
@@ -369,9 +370,7 @@ input[type="submit"] {
   grid-column: full-start / full-end;
   background-image: linear-gradient(rgba(159, 211, 210, 0.2), rgba(159, 211, 210, 0.3)), url(../img/header.png);
   background-size: cover;
-  background-position: center bottom;
-  padding: 8rem;
-  padding-top: 4rem; }
+  background-position: center bottom; }
 
 .footer {
   background-color: #b8bcb9;
@@ -413,13 +412,12 @@ input[type="submit"] {
   padding: 1rem; }
 
 .header {
-  background-color: #fff;
+  background-color: transparent;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-auto-flow: column;
-  align-items: center;
-  padding: 10px 30px; }
+  align-items: start; }
   .header__logo {
     grid-column: 1/2;
     width: 100%;
@@ -427,21 +425,25 @@ input[type="submit"] {
     display: grid; }
     .header__logo--img {
       object-fit: cover;
-      width: 80%;
+      width: 60%;
       max-height: auto;
-      justify-self: center; }
+      justify-self: center;
+      align-self: start;
+      margin-left: 100px; }
   .header__nav {
     grid-column: 2/3; }
     .header__nav--list {
       display: grid;
       grid-auto-flow: column;
       grid-template-columns: auto;
-      justify-content: right; }
+      justify-content: right;
+      margin-top: 40px;
+      margin-right: 100px; }
     .header__nav--item {
       display: grid;
       padding: 1.5rem;
       font-size: 1.4rem;
-      font-weight: 700;
+      font-weight: 500;
       list-style: none;
       transition: all 2s; }
     .header__nav--link {
@@ -451,15 +453,15 @@ input[type="submit"] {
       color: #2c302c;
       transition: all 0.2s; }
     .header__nav--link:hover {
-      color: #9fd3d2; }
+      color: black; }
     .header__nav--link::after {
       content: "";
       position: absolute;
       width: 100%;
-      height: 2px;
+      height: 1.3px;
       top: 100%;
       left: 0%;
-      background: #9fd3d2;
+      background: black;
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 300ms ease-in-out; }

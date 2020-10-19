@@ -21,7 +21,7 @@ body {
 .container {
   display: grid;
   justify-content: center;
-  grid-template-rows: max-content 80vh max-content min-content max-content repeat(
+  grid-template-rows: 80vh max-content max-content min-content repeat(
       2,
       min-content
     );

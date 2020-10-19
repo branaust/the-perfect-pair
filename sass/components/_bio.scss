@@ -19,6 +19,7 @@
     height: auto;
     overflow: hidden;
     justify-self: center;
+    align-self: center;
 
     @include respond(tab-land) {
       margin-left: 3rem;
