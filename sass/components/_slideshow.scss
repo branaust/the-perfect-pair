@@ -1,5 +1,6 @@
 .slideshow {
   grid-column: full-start / full-end;
+  grid-row: 1 / 2;
   background-image: linear-gradient(
       rgba($color-blue-light, 0.2),
       rgba($color-blue-light, 0.3)

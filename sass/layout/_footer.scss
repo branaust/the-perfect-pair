@@ -30,9 +30,9 @@
 
   &__link:hover,
   &__link:active {
-    background-color: rgba(#fff, 0.1);
+    background-color: rgb(159, 211, 210);
     transform: translateY(-3px);
-    color: $color-blue-light;
+    color: $color-white;
     font-weight: 600;
   }
 }
@@ -40,7 +40,7 @@
 .copyright {
   font-size: 1.4rem;
   font-weight: 600;
-  color: $color-blue-light;
+  color: $color-white;
   margin-top: 6rem;
   margin-right: auto;
   margin-left: auto;

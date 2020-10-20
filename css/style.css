@@ -71,7 +71,7 @@ h2 {
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: 33% 1fr;
-  margin: 12rem 0; }
+  margin-top: 20rem; }
   @media only screen and (max-width: 75em) {
     .bio {
       grid-gap: 3rem; } }
@@ -84,7 +84,7 @@ h2 {
     overflow: hidden;
     justify-self: center;
     align-self: center;
-    margin-left: 30rem; }
+    margin-left: 20rem; }
     @media only screen and (max-width: 75em) {
       .bio__picture {
         margin-left: 3rem;
@@ -122,13 +122,15 @@ h2 {
           grid-row-gap: 1.5rem; } }
     .bio__text--p {
       font-size: 1.6rem;
+      font-weight: 400;
       line-height: 3.5rem;
       margin-bottom: 2rem;
       margin-right: 3rem;
       transform: translateY(-1rem);
       background-color: rgba(226, 185, 209, 0.9);
       padding: 3rem;
-      color: #fff; }
+      color: #fff;
+      text-align: right; }
       @media only screen and (max-width: 75em) {
         .bio__text--p {
           font-size: 1.3rem;
@@ -146,15 +148,14 @@ h2 {
         transform: scaleY(-3px); } }
 
 .bio__picture img {
-  width: 100%;
-  height: auto;
-  overflow: hidden; }
+  width: 100%; }
 
 .cards {
   grid-column: center-start / center-end;
-  margin-bottom: 100px;
+  margin-bottom: 20rem;
+  margin-top: 20rem;
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 10rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content 1fr; }
   .cards__heading {
@@ -374,6 +375,7 @@ input[type="submit"] {
 
 .slideshow {
   grid-column: full-start / full-end;
+  grid-row: 1 / 2;
   background-image: linear-gradient(rgba(159, 211, 210, 0.2), rgba(159, 211, 210, 0.3)), url(../img/header.png);
   background-size: cover;
   background-position: center bottom; }
@@ -401,15 +403,15 @@ input[type="submit"] {
     display: block;
     transition: all 0.2s; }
   .nav__link:hover, .nav__link:active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #9fd3d2;
     transform: translateY(-3px);
-    color: #9fd3d2;
+    color: #fff;
     font-weight: 600; }
 
 .copyright {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #9fd3d2;
+  color: #fff;
   margin-top: 6rem;
   margin-right: auto;
   margin-left: auto;
@@ -420,6 +422,7 @@ input[type="submit"] {
 .header {
   background-color: transparent;
   grid-column: full-start / full-end;
+  grid-row: 1/2;
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-auto-flow: column;
@@ -428,14 +431,15 @@ input[type="submit"] {
     grid-column: 1/2;
     width: 100%;
     height: auto;
-    display: grid; }
+    display: grid;
+    z-index: 1; }
     .header__logo--img {
       object-fit: cover;
       width: 60%;
       max-height: auto;
       justify-self: center;
       align-self: start;
-      margin-left: 100px; }
+      margin-left: 50px; }
   .header__nav {
     grid-column: 2/3; }
     .header__nav--list {

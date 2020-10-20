@@ -1,6 +1,7 @@
 .header {
   background-color: transparent;
   grid-column: full-start / full-end;
+  grid-row: 1/2;
 
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -12,6 +13,7 @@
     width: 100%;
     height: auto;
     display: grid;
+    z-index: 1;
 
     &--img {
       object-fit: cover;
@@ -19,7 +21,7 @@
       max-height: auto;
       justify-self: center;
       align-self: start;
-      margin-left: 100px;
+      margin-left: 50px;
     }
   }
 

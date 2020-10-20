@@ -1,9 +1,10 @@
 .cards {
   grid-column: center-start / center-end;
-  margin-bottom: 100px;
+  margin-bottom: 20rem;
+  margin-top: 20rem;
 
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 10rem;
 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content 1fr;

@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 33% 1fr;
 
-  margin: 12rem 0;
+  margin-top: 20rem;
 
   @include respond(tab-land) {
     grid-gap: 3rem;
@@ -20,7 +20,7 @@
     overflow: hidden;
     justify-self: center;
     align-self: center;
-    margin-left: 30rem;
+    margin-left: 20rem;
     @include respond(tab-land) {
       margin-left: 3rem;
       width: 80%;
@@ -71,6 +71,7 @@
 
     &--p {
       font-size: 1.6rem;
+      font-weight: 400;
       line-height: 3.5rem;
 
       margin-bottom: 2rem;
@@ -79,6 +80,7 @@
       background-color: rgba(226, 185, 209, 0.9);
       padding: 3rem;
       color: $color-white;
+      text-align: right;
 
       @include respond(tab-land) {
         font-size: 1.3rem;
@@ -104,6 +106,4 @@
 
 .bio__picture img {
   width: 100%;
-  height: auto;
-  overflow: hidden;
 }
