@@ -82,3 +82,9 @@ body {
     font-size: 3rem;
   }
 }
+
+.container-services {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: max-content 1fr max-content;
+}
