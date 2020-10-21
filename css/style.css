@@ -264,15 +264,6 @@ h2 {
     font-size: 4rem;
     font-weight: 200; }
 
-.btn__card-1 {
-  background-color: #e2b9d1; }
-
-.btn__card-2 {
-  background-color: #9fd3d2; }
-
-.btn__card-3 {
-  background-color: #c19bcc; }
-
 .both {
   grid-row: 5 / 6;
   grid-column: center-start / center-end;
@@ -676,9 +667,11 @@ input[type="submit"] {
       color: #fff;
       padding: 1rem;
       line-height: 3rem;
-      text-align: left;
+      text-align: center;
       padding: 2rem;
-      align-content: center; }
+      justify-content: center;
+      margin-top: 2rem;
+      margin-right: 2rem; }
     .service__details--bullets {
       display: grid;
       grid-row: 2/3;
@@ -687,11 +680,10 @@ input[type="submit"] {
       font-weight: 600;
       color: #fff;
       padding: 1rem;
-      line-height: 3rem;
-      margin: 2rem; }
+      line-height: 3rem; }
       .service__details--bullets--1 {
         grid-column: 1/2;
-        margin-right: 1.5rem; }
+        margin-right: 2.5rem; }
       .service__details--bullets--2 {
         grid-column: 2/3; }
     .service__details--1 {
@@ -702,6 +694,7 @@ input[type="submit"] {
       grid-column: 1 / 2; }
   .service__picture {
     display: grid;
+    grid-template-rows: max-content, min-content;
     width: 100%;
     background-size: cover;
     height: auto;
@@ -716,6 +709,10 @@ input[type="submit"] {
     .service__picture--3 {
       clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
       background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flower-4.jpg); }
+  .service__btn {
+    display: grid;
+    grid-row: 2/3;
+    align-self: end; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -846,3 +843,26 @@ input[type="submit"] {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .btn__card-text {
     margin-top: 0.3rem; }
+  .btn__card-1 {
+    background-color: #e2b9d1; }
+  .btn__card-2 {
+    background-color: #9fd3d2; }
+  .btn__card-3 {
+    background-color: #c19bcc; }
+
+.btn__service {
+  justify-self: center;
+  height: 20%; }
+  .btn__service::after {
+    transform: scaleX(1.4) scaleY(1.7);
+    opacity: 0; }
+  .btn__service:active, .btn__service:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn__service-1 {
+    background-color: #e2b9d1; }
+  .btn__service-2 {
+    background-color: #9fd3d2; }
+  .btn__service-3 {
+    background-color: #c19bcc; }

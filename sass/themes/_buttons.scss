@@ -160,4 +160,45 @@
   &-text {
     margin-top: 0.3rem;
   }
+
+  &-1 {
+    background-color: $color-pink-2;
+  }
+
+  &-2 {
+    background-color: $color-blue-light;
+  }
+  &-3 {
+    background-color: $color-pink-3;
+  }
+}
+
+.btn__service {
+  justify-self: center;
+  height: 20%;
+
+  &:hover {
+  }
+
+  &::after {
+    transform: scaleX(1.4) scaleY(1.7);
+    opacity: 0;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &-1 {
+    background-color: $color-pink-2;
+  }
+  &-2 {
+    background-color: $color-blue-light;
+  }
+  &-3 {
+    background-color: $color-pink-3;
+  }
 }
