@@ -412,6 +412,10 @@ input[type="submit"] {
     transform: translateY(-3px);
     color: #fff;
     font-weight: 600; }
+  .nav__link--pink:hover, .nav__link--pink:active {
+    background-color: #e2b9d1; }
+  .nav__link--purple:hover, .nav__link--purple:active {
+    background-color: #c19bcc; }
 
 .copyright {
   font-size: 1.4rem;
