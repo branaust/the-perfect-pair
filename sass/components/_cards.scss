@@ -12,7 +12,6 @@
   &__heading {
     grid-column: 1 / -1;
     justify-self: center;
-    margin-bottom: 3rem;
     font-weight: 200;
   }
 }
@@ -128,15 +127,12 @@
     color: $color-primary;
     position: absolute;
     top: 12rem;
-    right: 3rem;
-    width: 75%;
+
     background-image: linear-gradient(
       rgba($color-white, 0.6),
       rgba($color-white, 0.6)
     );
     display: grid;
-
-    width: 100%;
   }
   &__heading-span {
     padding: 1rem 1.5rem;
