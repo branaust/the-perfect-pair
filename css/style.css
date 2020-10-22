@@ -659,7 +659,7 @@ input[type="submit"] {
     border-radius: 10px; }
   .service__details {
     display: grid;
-    grid-template-rows: repeat(2, 1fr); }
+    grid-template-rows: repeat(3, 1fr); }
     .service__details--description {
       grid-row: 1/2;
       font-size: 1.5rem;
@@ -694,7 +694,6 @@ input[type="submit"] {
       grid-column: 1 / 2; }
   .service__picture {
     display: grid;
-    grid-template-rows: max-content, min-content;
     width: 100%;
     background-size: cover;
     height: auto;
@@ -709,10 +708,18 @@ input[type="submit"] {
     .service__picture--3 {
       clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
       background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flower-4.jpg); }
-  .service__btn {
-    display: grid;
-    grid-row: 2/3;
-    align-self: end; }
+
+.btn__cont {
+  display: grid;
+  grid-row: 3/4; }
+  .btn__cont-1 {
+    justify-content: end;
+    align-content: center;
+    margin-right: 10rem; }
+  .btn__cont-2 {
+    justify-content: start;
+    align-content: center;
+    margin-left: 10rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -724,7 +731,6 @@ input[type="submit"] {
   transition: all 0.2s;
   position: relative;
   font-size: 1.4rem;
-  color: #fff;
   border: none;
   cursor: pointer; }
 
@@ -844,15 +850,27 @@ input[type="submit"] {
   .btn__card-text {
     margin-top: 0.3rem; }
   .btn__card-1 {
-    background-color: #e2b9d1; }
+    background-color: #e2b9d1;
+    color: #fff; }
   .btn__card-2 {
-    background-color: #9fd3d2; }
+    background-color: #9fd3d2;
+    color: #fff; }
   .btn__card-3 {
-    background-color: #c19bcc; }
+    background-color: #c19bcc;
+    color: #fff; }
 
 .btn__service {
+  display: grid;
+  grid-row: 3/4;
   justify-self: center;
-  height: 20%; }
+  align-self: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 50%;
+  width: 200%;
+  box-shadow: 0 0 0 0 black;
+  transform: scale(1);
+  animation: pulse 2s infinite; }
   .btn__service::after {
     transform: scaleX(1.4) scaleY(1.7);
     opacity: 0; }
@@ -861,8 +879,28 @@ input[type="submit"] {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .btn__service-1 {
-    background-color: #e2b9d1; }
+    color: #e2b9d1;
+    background-color: #fff; }
   .btn__service-2 {
-    background-color: #9fd3d2; }
+    color: #9fd3d2;
+    background-color: #fff; }
   .btn__service-3 {
-    background-color: #c19bcc; }
+    color: #c19bcc;
+    background-color: #fff; }
+  .btn__service-text {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    position: absolute;
+    font-weight: 600; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } }

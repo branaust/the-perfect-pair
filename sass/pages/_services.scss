@@ -91,7 +91,7 @@
 
   &__details {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 
     &--description {
       grid-row: 1/2;
@@ -139,7 +139,6 @@
 
   &__picture {
     display: grid;
-    grid-template-rows: max-content, min-content;
     width: 100%;
     background-size: cover;
     height: auto;
@@ -172,10 +171,21 @@
         url(../img/flower-4.jpg);
     }
   }
+}
 
-  &__btn {
-    display: grid;
-    grid-row: 2/3;
-    align-self: end;
+.btn__cont {
+  display: grid;
+  grid-row: 3/4;
+
+  &-1 {
+    justify-content: end;
+    align-content: center;
+    margin-right: 10rem;
+  }
+
+  &-2 {
+    justify-content: start;
+    align-content: center;
+    margin-left: 10rem;
   }
 }
