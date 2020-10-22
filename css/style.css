@@ -672,6 +672,9 @@ input[type="submit"] {
       justify-content: center;
       margin-top: 2rem;
       margin-right: 2rem; }
+      .service__details--description-2 {
+        margin-right: 0rem;
+        margin-left: 2rem; }
     .service__details--bullets {
       display: grid;
       grid-row: 2/3;
@@ -681,6 +684,8 @@ input[type="submit"] {
       color: #fff;
       padding: 1rem;
       line-height: 3rem; }
+      .service__details--bullets-blue {
+        margin-left: 5rem; }
       .service__details--bullets--1 {
         grid-column: 1/2;
         margin-right: 2.5rem; }

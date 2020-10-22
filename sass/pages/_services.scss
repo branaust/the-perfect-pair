@@ -105,6 +105,11 @@
       justify-content: center;
       margin-top: 2rem;
       margin-right: 2rem;
+
+      &-2 {
+        margin-right: 0rem;
+        margin-left: 2rem;
+      }
     }
 
     &--bullets {
@@ -116,6 +121,10 @@
       color: $color-white;
       padding: 1rem;
       line-height: 3rem;
+
+      &-blue {
+        margin-left: 5rem;
+      }
 
       &--1 {
         grid-column: 1/2;
