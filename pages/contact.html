@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="../main.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -12,7 +13,7 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <title>The Perfect Pair &mdash; Wedding Coordinators</title>
   </head>
-  <body class="container-portfolio">
+  <body class="container-contact">
     <header class="header">
       <div class="header__logo">
         <a href="../index.html">
@@ -27,7 +28,9 @@
             <a href="../index.html" class="header__nav--link">Home</a>
           </li>
           <li class="header__nav--item">
-            <a href="../portfolio.html" class="header__nav--link">Portfolio</a>
+            <a href="../pages/portfolio.html" class="header__nav--link"
+              >Portfolio</a
+            >
           </li>
           <li class="header__nav--item">
             <a href="../pages/services.html" class="header__nav--link"
@@ -41,47 +44,48 @@
             <a href="#" class="header__nav--link">About Us</a>
           </li>
           <li class="header__nav--item">
-            <a href="../pages/contact.html" class="header__nav--link"
-              >Inquire</a
-            >
+            <a href="#" class="header__nav--link">Inquire</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <section class="pictures">
-      <div class="picture">
-        <a href="./gallery/gallery1.html">
-          <img src="../img/port-1.jpg" alt="Img 1" />
-        </a>
-        <div class="picture__text">
-          <span class="picture__text-main">Jack And Jill</span>
-          <span class="picture__text-secondary">05.15.2020</span>
-        </div>
-      </div>
-      <div class="picture">
-        <img src="../img/port-2.jpg" alt="Img 1" />
-      </div>
-      <div class="picture">
-        <img src="../img/port-3.jpg" alt="Img 1" />
-      </div>
-      <div class="picture">
-        <img src="../img/port-4.jpg" alt="Img 1" />
-      </div>
-      <div class="picture">
-        <img src="../img/port-5.jpg" alt="Img 1" />
-      </div>
-      <div class="picture">
-        <img src="../img/port-6.jpg" alt="Img 1" />
-      </div>
-      <div class="picture">
-        <img src="../img/port-7.jpg" alt="Img 1" />
-      </div>
-      <div class="picture">
-        <img src="../img/port-8.jpg" alt="Img 1" />
-      </div>
-      <div class="picture">
-        <img src="../img/port-9.jpg" alt="Img 1" />
+    <section class="contact">
+      <div class="contain">
+        <div id="status"></div>
+        <form
+          action="https://formspree.io/f/xqkgqybl"
+          method="POST"
+          id="my-form"
+        >
+          <div class="form-group">
+            <label for="firstName"> First Name</label>
+            <input type="text" id="firstName" name="firstName" />
+          </div>
+
+          <div class="form-group">
+            <label for="latsName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="massage">Message</label>
+            <textarea
+              name="massage"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="btn__contact-cont">
+            <button class="btn btn__card-1" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
     </section>
 

@@ -7,7 +7,7 @@
   margin-top: 20rem;
 
   @include respond(tab-land) {
-    grid-gap: 3rem;
+    grid-template-rows: max-content 1fr;
   }
 
   &__picture {
@@ -24,6 +24,9 @@
     @include respond(tab-land) {
       margin-left: 3rem;
       width: 80%;
+      grid-row: 2/3;
+      justify-self: end;
+      align-self: end;
     }
   }
 
@@ -39,6 +42,10 @@
       margin-right: 10rem;
       margin-top: 3rem;
     }
+    @include respond(tab-land) {
+      margin-right: 0rem;
+      grid-row: 2/3;
+    }
 
     &--heading {
       display: grid;
@@ -49,6 +56,12 @@
       grid-row-gap: 2.5rem;
       margin-top: 1rem;
       margin-right: 3rem;
+
+      @include respond(tab-land) {
+        grid-row: 1/2;
+        margin-top: 0rem;
+        margin-right: 0rem;
+      }
 
       &-primary {
         font-weight: 200;
