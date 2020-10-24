@@ -6,10 +6,6 @@
 
   margin-top: 20rem;
 
-  @include respond(tab-land) {
-    grid-template-rows: max-content 1fr;
-  }
-
   &__picture {
     grid-column: 1 / 2;
 
@@ -21,13 +17,6 @@
     justify-self: center;
     align-self: center;
     margin-left: 20rem;
-    @include respond(tab-land) {
-      margin-left: 3rem;
-      width: 80%;
-      grid-row: 2/3;
-      justify-self: end;
-      align-self: end;
-    }
   }
 
   &__text {
@@ -41,10 +30,6 @@
     @include respond(big-desktop-1) {
       margin-right: 10rem;
       margin-top: 3rem;
-    }
-    @include respond(tab-land) {
-      margin-right: 0rem;
-      grid-row: 2/3;
     }
 
     &--heading {
@@ -76,10 +61,6 @@
         color: $color-blue-light;
         font-weight: 400;
       }
-
-      @include respond(tab-land) {
-        grid-row-gap: 1.5rem;
-      }
     }
 
     &--p {
@@ -94,14 +75,6 @@
       padding: 3rem;
       color: $color-white;
       text-align: center;
-
-      @include respond(tab-land) {
-        font-size: 1.3rem;
-        line-height: 3rem;
-        align-self: center;
-        margin-top: 1rem;
-        margin-right: 5rem;
-      }
     }
   }
 
