@@ -28,10 +28,6 @@
       position: absolute;
       top: 12rem;
       right: 3rem;
-      background-image: linear-gradient(
-        rgba($color-white, 0.6),
-        rgba($color-white, 0.6)
-      );
       display: grid;
       width: 100%;
     }
@@ -47,10 +43,7 @@
       color: $color-primary;
       position: absolute;
       top: 12rem;
-      background-image: linear-gradient(
-        rgba($color-white, 0.6),
-        rgba($color-white, 0.6)
-      );
+ 
       display: grid;
       width: 100%;
     }
@@ -100,13 +93,18 @@
       color: $color-white;
       padding: 1rem;
       line-height: 3rem;
-      text-align: center;
+      
       padding: 2rem;
       justify-content: center;
       margin-top: 2rem;
       margin-right: 2rem;
 
+      &-1 {
+        text-align: right;
+      }
+
       &-2 {
+        text-align: left;
         margin-right: 0rem;
         margin-left: 2rem;
       }

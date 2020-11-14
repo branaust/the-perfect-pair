@@ -219,7 +219,6 @@ h2 {
     color: #2c302c;
     position: absolute;
     top: 12rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
     display: grid; }
   .card__heading-span {
     padding: 1rem 1.5rem;
@@ -706,7 +705,6 @@ textarea {
     position: absolute;
     top: 12rem;
     right: 3rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
     display: grid;
     width: 100%; }
   .service__heading--2 {
@@ -719,7 +717,6 @@ textarea {
     color: #2c302c;
     position: absolute;
     top: 12rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
     display: grid;
     width: 100%; }
   .service--1 {
@@ -759,12 +756,14 @@ textarea {
       color: #fff;
       padding: 1rem;
       line-height: 3rem;
-      text-align: center;
       padding: 2rem;
       justify-content: center;
       margin-top: 2rem;
       margin-right: 2rem; }
+      .service__details--description-1 {
+        text-align: right; }
       .service__details--description-2 {
+        text-align: left;
         margin-right: 0rem;
         margin-left: 2rem; }
     .service__details--bullets {
