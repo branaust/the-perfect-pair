@@ -10,6 +10,7 @@
 
   &__logo {
     grid-column: 1/2;
+    grid-row: 1/2;
     width: 100%;
     height: auto;
     display: grid;
@@ -34,7 +35,8 @@
       grid-template-columns: auto;
       justify-content: right;
       margin-top: 40px;
-      margin-right: 100px;
+      margin-right: 60px;
+      height: 100%
     }
 
     &--item {
@@ -77,4 +79,14 @@
       transform-origin: left;
     }
   }
+}
+
+.nav-links{
+  display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: auto;
+      justify-content: right;
+      margin-top: 40px;
+      margin-right: 60px;
+      height: 100%
 }

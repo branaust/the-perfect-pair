@@ -49,3 +49,14 @@ function ajax(method, url, data, success, error) {
   };
   xhr.send(data);
 }
+
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links')
+const links = document.querySelectorAll('header__nav--link li')
+const logo = document.querySelector('.header__logo')
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open')
+  logo.classList.toggle('hide')
+})
