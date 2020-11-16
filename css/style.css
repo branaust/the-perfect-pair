@@ -129,14 +129,14 @@ h2 {
         font-weight: 400; }
     .bio__text--p {
       font-size: 1.6rem;
-      font-weight: 400;
+      font-weight: 200;
       line-height: 3.5rem;
       margin-bottom: 2rem;
       margin-right: 3rem;
       transform: translateY(-1rem);
-      background-color: rgba(226, 185, 209, 0.9);
+      background-color: rgba(226, 185, 209, 0.2);
       padding: 3rem;
-      color: #fff;
+      color: #2c302c;
       text-align: center; }
   .bio__btn {
     display: grid;
@@ -150,6 +150,84 @@ h2 {
 .bio__picture img {
   width: 100%; }
 
+@media only screen and (max-width: 75em) {
+  .bio {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr;
+    margin-top: 10rem; }
+    .bio__picture {
+      grid-column: 1 / -1;
+      display: none;
+      width: 15%;
+      height: auto;
+      overflow: hidden;
+      justify-self: center;
+      align-self: center;
+      margin-left: 0rem; }
+    .bio__text {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-rows: 20% 1fr;
+      justify-content: center;
+      text-align: start;
+      margin-right: 0rem; }
+      .bio__text--heading {
+        display: grid;
+        grid-row: repeat(2, min-content);
+        justify-content: center;
+        align-self: flex-start;
+        text-align: center;
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        grid-row-gap: 2.5rem;
+        margin-top: 1rem;
+        margin-right: 0rem; }
+        .bio__text--heading-primary {
+          font-weight: 200; }
+        .bio__text--heading-secondary {
+          font-weight: 500;
+          font-style: italic; }
+        .bio__text--heading-span {
+          color: #9fd3d2;
+          font-weight: 400; }
+      .bio__text--p {
+        font-size: 1.6rem;
+        font-weight: 200;
+        line-height: 3.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 0rem;
+        transform: translateY(-1rem);
+        background-color: rgba(226, 185, 209, 0.2);
+        padding: 3rem;
+        color: #2c302c;
+        text-align: center; }
+    .bio__btn {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      margin-right: 3rem; } }
+    @media only screen and (max-width: 75em) and (min-width: 93.75em) {
+      .bio__btn {
+        transform: scaleY(-3px); } }
+
+@media only screen and (max-width: 56.25em) {
+  .bio {
+    margin-top: 5rem; }
+    .bio__text {
+      grid-template-rows: 15% 1fr; }
+      .bio__text--p {
+        font-size: 1.4rem;
+        margin-bottom: 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .bio__text--heading {
+    margin-top: 0rem; }
+  .bio__text--p {
+    margin-top: 0rem; } }
+
 .cards {
   grid-column: center-start / center-end;
   margin-bottom: 20rem;
@@ -161,7 +239,8 @@ h2 {
   .cards__heading {
     grid-column: 1 / -1;
     justify-self: center;
-    font-weight: 200; }
+    font-weight: 200;
+    grid-row: 1/2; }
 
 .card {
   perspective: 150rem;
@@ -212,7 +291,7 @@ h2 {
     .card__picture--3 {
       background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flower-4.jpg); }
   .card__heading {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
@@ -256,6 +335,100 @@ h2 {
   .card__price-value {
     font-size: 4rem;
     font-weight: 200; }
+
+@media only screen and (max-width: 75em) {
+  .cards {
+    margin-top: 15rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .cards {
+    grid-column: 5 / 7;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+    display: grid;
+    grid-gap: 8rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content repeat(3, 1fr); }
+  .card {
+    display: grid;
+    height: auto;
+    width: 40rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border-radius: 1.5rem; }
+    .card--1 {
+      grid-row: 2/3;
+      grid-column: 1/-1; }
+    .card--2 {
+      grid-row: 3/4;
+      grid-column: 1/-1; }
+    .card--3 {
+      grid-row: 4/-1;
+      grid-column: 1/-1; }
+    .card__details ul li {
+      color: #2c302c; }
+      .card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #2c302c; }
+    .card__side {
+      height: auto;
+      position: relative;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      box-shadow: none;
+      border-radius: 0; }
+      .card__side--front-1 {
+        background-color: #fff; }
+      .card__side--front-2 {
+        background-color: #fff; }
+      .card__side--front-3 {
+        background-color: #fff; }
+      .card__side--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); }
+        .card__side--back-1 {
+          background: #e2b9d1; }
+        .card__side--back-2 {
+          background: #9fd3d2; }
+        .card__side--back-3 {
+          background: #c19bcc; }
+    .card:hover .card__side--front {
+      transform: rotateY(0); }
+    .card__details {
+      padding: 1rem 3rem; }
+    .card__cta {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 2rem;
+      margin-top: 7rem;
+      text-align: center;
+      position: relative;
+      top: 0;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+      padding: 0rem 0rem 2rem 0rem; }
+    .card__price-box {
+      text-align: center;
+      margin-bottom: 0rem;
+      color: #fff; }
+    .card__price-value {
+      font-size: 4rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .cards {
+    margin-top: 15rem; }
+  .card {
+    width: 35rem; }
+    .card__heading {
+      margin-bottom: 0rem; }
+    .card__cta {
+      padding: 0rem; }
+    .card__details {
+      padding: 0rem 1rem; }
+    .card__price-only {
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem; }
+    .card__price-value {
+      font-size: 3rem; } }
 
 .contact {
   display: grid;
@@ -475,41 +648,41 @@ input[type="submit"] {
   margin-right: 60px;
   height: 100%; }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 56.25em) {
   nav {
-    grid-column: 1/2;
+    grid-column: 1/-1;
     grid-row: 1/2;
     background-color: #9fd3d2;
     z-index: 1; }
   .nav-links {
-    grid-column: 1/2;
-    display: flex;
+    grid-column: 1/-1;
+    display: grid;
     position: fixed;
     height: 100vh;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 0;
     margin-right: 0;
-    flex-direction: column;
+    grid-auto-flow: row;
     background-color: #9fd3d2;
     z-index: 1;
-    clip-path: circle(100px at 90% -30%);
-    -webkit-clip-path: circle(100px at 90% -30%);
+    clip-path: circle(100px at 100% -50%);
+    -webkit-clip-path: circle(100px at 100% -50%);
     transition: all .5s ease-out; }
   .header__nav--link {
     color: white;
     margin: 0;
     width: 100%; }
   .header__logo {
-    width: 70%; }
+    width: 90%; }
     .header__logo--img {
-      margin-left: 20px; }
+      margin-left: 50px; }
   .hamburger {
     position: absolute;
     cursor: pointer;
-    right: 10%;
-    top: 7%;
+    right: 7%;
+    top: 12%;
     transform: translate(-5%, -50%);
     z-index: 2; }
   .line {
@@ -520,12 +693,26 @@ input[type="submit"] {
     background: white;
     margin: 5px; }
   .nav-links.open {
-    clip-path: circle(1000px at 90% -10%);
-    -webkit-clip-path: circle(1000px at 90% -10%); }
+    clip-path: circle(2000px at 90% -50%);
+    -webkit-clip-path: circle(2000px at 90% -50%); }
   .header__logo.hide {
     display: none;
     transition: all 1s ease-in;
     transition-delay: 1s; } }
+
+@media only screen and (max-width: 23.44em) {
+  .header__nav--link {
+    color: white;
+    margin: 0; }
+  .nav-links {
+    width: 110%; }
+  .hamburger {
+    right: 9%;
+    top: 10%; }
+  .header__logo {
+    width: 60%; }
+    .header__logo--img {
+      margin-left: 7rem; } }
 
 .contain {
   display: grid;
@@ -1033,3 +1220,28 @@ textarea {
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } }
+
+@media only screen and (max-width: 56.25em) {
+  .btn__card {
+    width: 30%;
+    height: 70%; }
+    .btn__card-text {
+      margin-top: 0rem;
+      margin-bottom: 3rem; }
+    .btn__card-1 {
+      background-color: #fff;
+      color: black; }
+    .btn__card-2 {
+      background-color: #fff;
+      color: black; }
+    .btn__card-3 {
+      background-color: #fff;
+      color: black; } }
+
+@media only screen and (max-width: 37.5em) {
+  .btn__card {
+    width: 15%;
+    height: 70%; }
+    .btn__card-text {
+      margin-top: 0rem;
+      margin-bottom: 3rem; } }

@@ -241,3 +241,40 @@
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
+
+
+@include respond(tab-port) {
+
+
+  .btn__card{
+    width: 30%;
+    height: 70%;
+    
+
+    &-text {
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+
+    &-1{
+    background-color: $color-white;
+    color: black;
+    }
+    &-2{background-color: $color-white;
+      color: black;}
+    &-3{background-color: $color-white;
+      color: black;}
+  }
+}
+@include respond(phone){
+  .btn__card{
+    width: 15%;
+    height: 70%;
+    
+
+    &-text {
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+}
+}

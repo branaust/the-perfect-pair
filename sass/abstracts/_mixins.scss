@@ -9,8 +9,21 @@
 
 ////////// GENERAL MIXINS //////////
 
+
+
+
 ////////// GENERIC PHONE
+
+
 @mixin respond($breakpoint) {
+
+  @if $breakpoint == iphone {
+    @media only screen and (max-width: 23.44em) {
+      @content;
+    } //375px
+  }
+
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;

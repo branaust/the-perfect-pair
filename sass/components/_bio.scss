@@ -65,15 +65,15 @@
 
     &--p {
       font-size: 1.6rem;
-      font-weight: 400;
+      font-weight: 200;
       line-height: 3.5rem;
 
       margin-bottom: 2rem;
       margin-right: 3rem;
       transform: translateY(-1rem);
-      background-color: rgba(226, 185, 209, 0.9);
+      background-color: rgba(226, 185, 209, 0.2);
       padding: 3rem;
-      color: $color-white;
+      color: $color-primary;
       text-align: center;
     }
   }
@@ -92,4 +92,121 @@
 
 .bio__picture img {
   width: 100%;
+}
+
+@include respond(tab-land){
+  .bio {
+    grid-column: center-start / center-end;
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr;
+  
+    margin-top: 10rem;
+  
+    &__picture {
+      grid-column: 1 / -1;
+  
+      display: none;
+      width: 15%;
+      height: auto;
+      overflow: hidden;
+      justify-self: center;
+      align-self: center;
+      margin-left: 0rem;
+    }
+  
+    &__text {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-rows: 20% 1fr;
+      justify-content: center;
+      text-align: start;
+      margin-right: 0rem;
+  
+  
+      &--heading {
+        display: grid;
+        grid-row: repeat(2, min-content);
+        justify-content: center;
+        align-self: flex-start;
+        text-align: center;
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        grid-row-gap: 2.5rem;
+        margin-top: 1rem;
+        margin-right: 0rem;
+  
+  
+        &-primary {
+          font-weight: 200;
+          
+        }
+  
+        &-secondary {
+          font-weight: 500;
+          font-style: italic;
+          
+        }
+  
+        &-span {
+          color: $color-blue-light;
+          font-weight: 400;
+        }
+      }
+  
+      &--p {
+        font-size: 1.6rem;
+        font-weight: 200;
+        line-height: 3.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 0rem;
+        transform: translateY(-1rem);
+        background-color: rgba(226, 185, 209, 0.2);
+        padding: 3rem;
+        color: $color-primary;
+        text-align: center;
+      }
+    }
+  
+    &__btn {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      margin-right: 3rem;
+  
+      @include respond(big-desktop-1) {
+        transform: scaleY(-3px);
+      }
+    }
+  }
+}
+
+@include respond(tab-port){
+  .bio{
+    margin-top: 5rem;
+    
+    &__text{
+      grid-template-rows: 15% 1fr;;
+
+      &--p{
+        font-size: 1.4rem;
+        margin-bottom: 0rem;
+      }
+    }
+  }
+}
+
+@include respond(phone){
+  .bio{
+    &__text{
+      &--heading{
+        margin-top: 0rem;
+      }
+      &--p{
+        margin-top: 0rem;
+      }
+    }
+  }
 }
