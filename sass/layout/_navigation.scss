@@ -44,8 +44,8 @@
   .hamburger {
     position: absolute;
     cursor: pointer;
-    right: 7%;
-    top: 12%;
+    right: 8.5%;
+    top: 9.5%;
     transform: translate(-5%, -50%);
     z-index: 2;
   }
@@ -55,7 +55,7 @@
    grid-row: 1/2;
    width: 30px;
    height:3px;
-   background: white;
+   background: $color-primary;
    margin: 5px;
  }
 
@@ -73,6 +73,12 @@
 }
 
 @include respond(iphone) {
+  nav{
+    .hamburger {
+      right: 9%;
+      top: 7%;
+    }
+  }
 
   .header__nav--link {
     color: white;
@@ -84,15 +90,12 @@
     
   }
 
-  .hamburger {
-    right: 9%;
-    top: 10%;
-  }
+ 
 
   .header__logo{
     width: 60%;
     &--img{
-      margin-left: 7rem;
+      margin-left: 5rem;
     }
   }
 }
