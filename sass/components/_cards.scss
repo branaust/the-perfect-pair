@@ -243,7 +243,7 @@ ul{
       color: $color-primary;
 
       &:not(:last-child) {
-        border-bottom: 1px solid $color-primary;
+        border-bottom: 1px solid $color-grey-dark-3;
       }
     }
   }
@@ -330,8 +330,27 @@ ul{
   .card{
     width: 35rem;
 
+    &__picture{
+      height: 12rem;
+    }
+
     &__heading {
-      margin-bottom: 0rem;
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      color: $color-primary;
+      position: absolute;
+      top: 5rem;
+  
+     
+      display: grid;
+    }
+    &__heading-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      justify-self: end;
     }
 
     &__cta{

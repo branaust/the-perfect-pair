@@ -134,7 +134,7 @@ h2 {
       margin-bottom: 2rem;
       margin-right: 3rem;
       transform: translateY(-1rem);
-      background-color: rgba(226, 185, 209, 0.2);
+      background-color: #eaeaea;
       padding: 3rem;
       color: #2c302c;
       text-align: center; }
@@ -200,7 +200,7 @@ h2 {
         margin-bottom: 2rem;
         margin-right: 0rem;
         transform: translateY(-1rem);
-        background-color: rgba(226, 185, 209, 0.2);
+        background-color: eaeaea;
         padding: 3rem;
         color: #2c302c;
         text-align: center; }
@@ -385,7 +385,7 @@ h2 {
     .card__details ul li {
       color: #2c302c; }
       .card__details ul li:not(:last-child) {
-        border-bottom: 1px solid #2c302c; }
+        border-bottom: 1px solid #b8bcb9; }
     .card__side {
       height: auto;
       position: relative;
@@ -435,8 +435,22 @@ h2 {
     margin-top: 15rem; }
   .card {
     width: 35rem; }
+    .card__picture {
+      height: 12rem; }
     .card__heading {
-      margin-bottom: 0rem; }
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      color: #2c302c;
+      position: absolute;
+      top: 5rem;
+      display: grid; }
+    .card__heading-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      justify-self: end; }
     .card__cta {
       padding: 0rem; }
     .card__details {
@@ -1097,107 +1111,106 @@ textarea {
       top: 6rem; } }
 
 @media only screen and (max-width: 56.25em) {
-  .service {
-    grid-template-columns: center-start / center-end; }
-    .service--1 {
-      display: grid;
-      grid-template-rows: 15% max-content 1fr;
+  .service--1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 15% max-content 1fr;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    background-color: #e2b9d1;
+    position: relative;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    position: relative; }
+  .service--2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 1fr;
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    background-color: #9fd3d2;
+    position: relative;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 10px; }
+  .service--3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 1fr;
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    background-color: #c19bcc;
+    position: relative;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 10px; }
+  .service__picture {
+    display: grid;
+    width: 100%;
+    background-size: cover;
+    height: auto;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .service__picture--1 {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flowers.jpg);
+      grid-row: 1/2;
+      grid-column: 1/-1; }
+    .service__picture--2 {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flower-3.jpg);
+      grid-row: 1/2;
+      grid-column: 1/-1; }
+    .service__picture--3 {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flower-4.jpg);
+      grid-row: 1/2;
+      grid-column: 1/-1; }
+  .service__details {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); }
+    .service__details--1 {
       grid-row: 2/3;
-      grid-column: 1/-1;
-      background-color: #e2b9d1;
-      position: relative;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-      border-radius: 10px;
-      position: relative; }
-    .service--2 {
+      grid-column: 1/-1; }
+    .service__details--2 {
+      grid-row: 2/3;
+      grid-column: 1/-1; }
+    .service__details--3 {
+      grid-row: 2/3;
+      grid-column: 1/-1; }
+    .service__details--description {
+      grid-row: 1/2;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+      padding: 1rem;
+      line-height: 3rem;
+      padding: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+      margin-right: 0rem; }
+      .service__details--description-1 {
+        text-align: center; }
+      .service__details--description-2 {
+        text-align: center;
+        margin-right: 0rem;
+        margin-left: 0rem; }
+    .service__details--bullets {
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 15% 1fr;
-      grid-row: 3/4;
-      grid-column: 1/-1;
-      background-color: #9fd3d2;
-      position: relative;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-      border-radius: 10px; }
-    .service--3 {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 15% 1fr;
-      grid-row: 4/5;
-      grid-column: 1/-1;
-      background-color: #c19bcc;
-      position: relative;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-      border-radius: 10px; }
-    .service__picture {
-      display: grid;
-      width: 100%;
-      background-size: cover;
-      height: auto;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px; }
-      .service__picture--1 {
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-        background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flowers.jpg);
-        grid-row: 1/2;
-        grid-column: 1/-1; }
-      .service__picture--2 {
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-        background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flower-3.jpg);
-        grid-row: 1/2;
-        grid-column: 1/-1; }
-      .service__picture--3 {
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-        background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/flower-4.jpg);
-        grid-row: 1/2;
-        grid-column: 1/-1; }
-    .service__details {
-      display: grid;
-      grid-template-rows: repeat(3, 1fr); }
-      .service__details--1 {
-        grid-row: 2/3;
-        grid-column: 1/-1; }
-      .service__details--2 {
-        grid-row: 2/3;
-        grid-column: 1/-1; }
-      .service__details--3 {
-        grid-row: 2/3;
-        grid-column: 1/-1; }
-      .service__details--description {
-        grid-row: 1/2;
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: #fff;
-        padding: 1rem;
-        line-height: 3rem;
-        padding: 2rem;
-        justify-content: center;
-        margin-top: 2rem;
-        margin-right: 0rem; }
-        .service__details--description-1 {
-          text-align: center; }
-        .service__details--description-2 {
-          text-align: center;
-          margin-right: 0rem;
-          margin-left: 0rem; }
-      .service__details--bullets {
-        display: grid;
-        grid-row: 2/3;
-        grid-template-columns: repeat(2, 1fr);
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #fff;
-        padding: 1rem;
-        line-height: 3rem; }
-        .service__details--bullets-blue {
-          margin-left: 3rem; }
-        .service__details--bullets--1 {
-          grid-column: 1/2;
-          margin-right: 5rem;
-          margin-left: 8rem; }
-        .service__details--bullets--2 {
-          grid-column: 2/3;
-          margin-right: 5rem; }
+      grid-row: 2/3;
+      grid-template-columns: repeat(2, 1fr);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      padding: 1rem;
+      line-height: 3rem; }
+      .service__details--bullets-blue {
+        margin-left: 3rem; }
+      .service__details--bullets--1 {
+        grid-column: 1/2;
+        margin-right: 5rem;
+        margin-left: 8rem; }
+      .service__details--bullets--2 {
+        grid-column: 2/3;
+        margin-right: 5rem; }
   .btn__cont {
     display: grid; }
     .btn__cont-1 {
@@ -1274,16 +1287,19 @@ textarea {
     padding: 1rem;
     line-height: 3rem; }
     .service__details--bullets-blue {
-      margin-right: 3rem; }
+      margin-right: 0rem; }
     .service__details--bullets-pink {
-      margin-left: 3rem; }
+      margin-left: 1rem; }
     .service__details--bullets--1 {
       grid-column: 1/2;
-      margin-right: 5rem;
-      margin-left: 2rem; }
+      margin-right: 1rem;
+      margin-left: 1rem; }
     .service__details--bullets--2 {
       grid-column: 2/3;
-      margin-right: 2rem; } }
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  .service--1 {
+    width: auto; } }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
