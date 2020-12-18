@@ -200,7 +200,7 @@ h2 {
         margin-bottom: 2rem;
         margin-right: 0rem;
         transform: translateY(-1rem);
-        background-color: #9fd3d2;
+        background-color: rgba(226, 185, 209, 0.2);
         padding: 3rem;
         color: #2c302c;
         text-align: center; }
