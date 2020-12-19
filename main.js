@@ -59,4 +59,5 @@ const logo = document.querySelector('.header__logo')
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open')
   logo.classList.toggle('hide')
+  hamburger.classList.toggle('open')
 })

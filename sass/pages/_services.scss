@@ -58,6 +58,8 @@
     position: relative;
     box-shadow: $box-shadow-primary;
     border-radius: 10px;
+    
+    
   }
 
   &--2 {
@@ -415,10 +417,34 @@
 }
 }
 
-@include respond(phone){
+@include respond(iphone){
   .service{
 
+    &--1{
+      margin: 2rem;
+    }
 
+    &--2{
+      margin: 1.5rem;
+    }
+
+    &--3{
+      margin: 2rem;
+    }
+
+    &__heading-span--2{
+      text-align: right;
+      margin-right: 10rem;
+
+      color: $color-primary;
+      position: absolute;
+      top: 0rem;
+      right: 0rem;
+      left: 10rem;
+      line-height: 2.5rem;
+    }
+
+    
     &__details{
 
 

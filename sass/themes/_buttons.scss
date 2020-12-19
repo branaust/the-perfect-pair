@@ -278,3 +278,12 @@
     }
 }
 }
+
+@include respond(iphone) {
+  .btn__card {
+    width: 40%;
+    justify-self: center;
+    text-align: center;
+    height: 60%;
+  }
+}

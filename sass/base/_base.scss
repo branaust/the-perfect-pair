@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  
 }
 
 html {
@@ -16,6 +17,7 @@ body {
   color: $color-primary;
   font-weight: 300;
   line-height: 1.6rem;
+ 
 }
 
 .container {
@@ -111,4 +113,37 @@ body {
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+@include respond(iphone) {
+  .container {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 50vh max-content max-content min-content repeat(
+        2,
+        min-content
+      );
+    grid-template-columns:
+      [full-start] minmax(0rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(0rem, 1fr) [full-end];
+}
+
+.container-services {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: max-content 1fr max-content;
+
+  grid-template-columns:
+    [full-start] minmax(0rem, auto) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(0rem, auto) [full-end];
+
+    
+}
+
 }

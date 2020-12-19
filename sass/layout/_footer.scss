@@ -30,21 +30,13 @@
 
   &__link:hover,
   &__link:active {
-    background-color: rgb(159, 211, 210);
+    background-color: #808080;
     transform: translateY(-3px);
     color: $color-white;
     font-weight: 600;
   }
 
-  &__link--pink:hover,
-  &__link--pink:active {
-    background-color: $color-pink-2;
-  }
-
-  &__link--purple:hover,
-  &__link--purple:active {
-    background-color: $color-pink-3;
-  }
+ 
 }
 
 .copyright {
