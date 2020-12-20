@@ -4,6 +4,7 @@
   "description": "Perfect Pair webpage",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build index.html",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
