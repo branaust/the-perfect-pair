@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: build
+    - name: Use Node.js ${{ matrix.node-version }}
       - run: |
         ls -l
